@@ -14,4 +14,8 @@ export class SearchPage {
         await expect(this.productThumb.first()).toBeVisible();
     }
 
+    async clickProduct(productName) {
+    await this.page.getByRole('link', { name: productName }).first().click();
+  }
+
 }

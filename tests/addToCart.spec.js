@@ -10,7 +10,7 @@ test('Search product, add to cart and verify', async ({ page, homePage, searchPa
   await homePage.searchProduct(productName);
   await searchPage.verifySearchResult(productName);
 
-  await page.getByRole('link', { name: productName }).first().click();
+  await searchPage.clickProduct(productName);
 
   await productPage.addToCart();
   await productPage.verifyAddedToCart(productName);

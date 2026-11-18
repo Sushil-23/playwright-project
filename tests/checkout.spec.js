@@ -10,7 +10,7 @@ test('Complete guest checkout flow', async ({ page, homePage, searchPage, produc
   await homePage.goto();
   await homePage.searchProduct(productName);
   await searchPage.verifySearchResult(productName);
-  await page.getByRole('link', { name: productName }).first().click();
+  await searchPage.clickProduct(productName);
   await productPage.addToCart();
   await productPage.verifyAddedToCart(productName);
 
