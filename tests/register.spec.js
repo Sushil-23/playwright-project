@@ -1,14 +1,9 @@
 // tests/register.spec.js
-import { test, expect } from '@playwright/test';
-import { HomePage } from '../pages/HomePage';
-import { RegisterPage } from '../pages/RegisterPage';
+import { test, expect } from '../fixtures/pomFixture';
 import { newUser } from '../test-data/users';
 
-test('Register a new account successfully', async ({ page }) => {
+test('Register a new account successfully', async ({ page, homePage, registerPage }) => {
 
-
-  const homePage = new HomePage(page);
-  const registerPage = new RegisterPage(page);
   const user = newUser();
 
   await homePage.goto();

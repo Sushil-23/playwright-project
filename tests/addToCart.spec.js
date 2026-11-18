@@ -1,15 +1,7 @@
 // tests/addToCart.spec.js
-import { test, expect } from '@playwright/test';
-import { HomePage } from '../pages/HomePage';
-import { SearchPage } from '../pages/SearchPage';
-import { ProductPage } from '../pages/ProductPage';
-import { CartPage } from '../pages/CartPage';
+import { test, expect } from '../fixtures/pomFixture';
 
-test('Search product, add to cart and verify', async ({ page }) => {
-  const homePage = new HomePage(page);
-  const searchPage = new SearchPage(page);
-  const productPage = new ProductPage(page);
-  const cartPage = new CartPage(page);
+test('Search product, add to cart and verify', async ({ page, homePage, searchPage, productPage, cartPage }) => {
 
   const productName = 'MacBook';
 

@@ -1,11 +1,8 @@
-import { test, expect } from '@playwright/test';
-import { HomePage } from '../pages/HomePage';
-import { LoginPage } from '../pages/LoginPage';
+import { test, expect } from '../fixtures/pomFixture';
 import { validUser } from '../test-data/users';
 
-test('Login with valid credentials', async ({ page }) => {
-    const homePage = new HomePage(page);
-    const loginPage = new LoginPage(page);
+test('Login with valid credentials', async ({ homePage, loginPage }) => {
+
     await homePage.goto();
     await homePage.clickLogin();
     await loginPage.login(validUser.email, validUser.password);

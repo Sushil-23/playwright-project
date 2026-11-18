@@ -1,18 +1,8 @@
 // tests/checkout.spec.js
-import { test, expect } from '@playwright/test';
-import { HomePage } from '../pages/HomePage';
-import { SearchPage } from '../pages/SearchPage';
-import { ProductPage } from '../pages/ProductPage';
-import { CartPage } from '../pages/CartPage';
-import { CheckoutPage } from '../pages/CheckoutPage';
+import { test, expect } from '../fixtures/pomFixture';
 import { guestUser } from '../test-data/users';
 
-test('Complete guest checkout flow', async ({ page }) => {
-  const homePage = new HomePage(page);
-  const searchPage = new SearchPage(page);
-  const productPage = new ProductPage(page);
-  const cartPage = new CartPage(page);
-  const checkoutPage = new CheckoutPage(page);
+test('Complete guest checkout flow', async ({ page, homePage, searchPage, productPage, cartPage, checkoutPage }) => {
 
   const productName = 'HP';
 
