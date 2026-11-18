@@ -2,7 +2,7 @@
 import { test, expect } from '../fixtures/pomFixture';
 import { newUser } from '../test-data/users';
 
-test('Register a new account successfully', async ({ page, homePage, registerPage }) => {
+test('Register a new account successfully @smoke @register', async ({ page, homePage, registerPage }) => {
 
   const user = newUser();
 

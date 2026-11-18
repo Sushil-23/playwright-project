@@ -1,7 +1,7 @@
 // tests/addToCart.spec.js
 import { test, expect } from '../fixtures/pomFixture';
 
-test('Search product, add to cart and verify', async ({ page, homePage, searchPage, productPage, cartPage }) => {
+test('Search product, add to cart and verify @smoke @cart', async ({ page, homePage, searchPage, productPage, cartPage }) => {
 
   const productName = 'MacBook';
 

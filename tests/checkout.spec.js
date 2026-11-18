@@ -2,7 +2,7 @@
 import { test, expect } from '../fixtures/pomFixture';
 import { guestUser } from '../test-data/users';
 
-test('Complete guest checkout flow', async ({ page, homePage, searchPage, productPage, cartPage, checkoutPage }) => {
+test('Complete guest checkout flow @smoke @checkout', async ({ homePage, searchPage, productPage, cartPage, checkoutPage }) => {
 
   const productName = 'HP';
 

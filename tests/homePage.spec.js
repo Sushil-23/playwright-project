@@ -2,7 +2,7 @@
 import { test, expect } from '../fixtures/pomFixture';
 
 
-test('Home page should load successfully', async ({ page, homePage }) => {
+test('Home page should load successfully @smoke @home', async ({ page, homePage }) => {
 
     await homePage.goto();
     await expect(page).toHaveTitle('Your Store');
